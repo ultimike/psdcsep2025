@@ -1,0 +1,11 @@
+/vendor
+/web/core
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+*.sql.gz
+.idea
+/keys
+/web/themes/custom/deradix/node_modules/
+/web/themes/custom/drupaleasy_sdc/node_modules/

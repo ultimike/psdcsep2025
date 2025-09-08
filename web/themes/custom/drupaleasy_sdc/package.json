@@ -1,0 +1,22 @@
+{
+  "name": "drupaleasy_sdc_postcss",
+  "author": "Michael Anello",
+  "license": "MIT",
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "postcss src/styles.css --dir css",
+    "watch:css": "echo 'Press Ctrl-C to exit\n' && postcss src/styles.css --dir css --watch --verbose",
+    "buildall:css": "node build-css.js"
+  },
+  "devDependencies": {
+    "cssnano": "^7.1.1",
+    "glob": "^11.0.3",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.1",
+    "postcss-mixins": "^12.1.2",
+    "postcss-preset-env": "^10.3.1",
+    "postcss-pxtorem": "^6.1.0",
+    "postcss-url": "^10.1.3"
+  }
+}
