@@ -1,0 +1,15 @@
+{%
+  set classes = [
+  'chip',
+  'chip--color-' ~ color|clean_class,
+  dismissible ? 'chip--dismissible',
+]
+%}
+
+{# Preferred #}
+<div{{attributes.addClass(classes)}}>{{ content }}</div>
+
+{# Not preferred - use twig blocks only when necessary (for maximum
+flexibility.) When using this method, Twig embed must be used when calling the
+SDC. #}
+{# <div{{attributes.addClass(classes)}}>{% block content %}{{ content }}{% endblock %}</div> #}

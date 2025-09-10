@@ -95,4 +95,37 @@
     {{ content }}
   </div>
 
+  {# Preferred #}
+  {% set chip_content %}
+  Type:
+  <strong>{{ node.bundle() }}</strong>
+  {% endset %}
+
+  {{ include('drupaleasy_sdc:chip', {
+    color: 'secondary',
+    dismissible: false,
+    content: chip_content,
+  }, with_context = false) }}
+
+  {# Not preferred #}
+  {% include 'drupaleasy_sdc:chip' with {
+    color: 'primary',
+    dismissible: true,
+    content: chip_content
+  } only %}
+
+  {# Not preferred #}
+  {% embed 'drupaleasy_sdc:chip' with {
+    color: 'primary',
+    dismissible: true,
+    node: node } only %}
+    {% block content %}
+      Type:
+      <strong>{{ node.bundle() }}</strong>
+    {% endblock %}
+  {% endembed %}
+
+
+
+
 </article>
