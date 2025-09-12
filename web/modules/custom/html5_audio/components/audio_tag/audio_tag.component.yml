@@ -1,0 +1,26 @@
+name: Audio tag
+status: stable
+description: HTML5 Audio player
+props:
+  type: object
+  properties:
+    sources:
+      type: array
+      items:
+        type: object
+        required: [src, mimetype]
+        properties:
+          src:
+            type: string
+          mimetype:
+            type: string
+      title: Sources
+      description: An array of audio URLs and their mimetypes.
+      # @todo Add examples here.
+      examples: []
+    autoplay:
+      type: string
+      title: Autoplay
+      description: Autoplay enabled when value is &quot;autoplay&quot;.
+      # @todo Add examples here.
+      examples: []
