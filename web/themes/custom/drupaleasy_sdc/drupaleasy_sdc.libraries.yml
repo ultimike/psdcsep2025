@@ -109,3 +109,6 @@ user:
     component:
       css/components/user.css:
         weight: -10
+# fabric:
+#   js:
+#     "https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js": { external: true, attributes: { async: true } }

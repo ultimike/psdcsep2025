@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'media',
+    'media--type-' ~ media.bundle()|clean_class,
+    not media.isPublished() ? 'media--unpublished',
+    view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+{% set caption = content.field_caption is not empty ? content.field_caption : null %}
+
+<article{{ attributes.addClass(classes) }}>
+  {{ title_suffix.contextual_links }}
+  {% if content %}
+    {{ include('drupaleasy_sdc:figure', {
+      figure_classes: ['rounded-corners', 'spinny'],
+      figure_caption_classes: ['guacamole'],
+      image: content.field_media_image,
+      caption: caption,
+    }, with_context = false) }}
+  {% endif %}
+</article>
