@@ -1,0 +1,21 @@
+name: 'Block quote left'
+machine_name: 'block_quote_left'
+description: 'A two-column component with a blockquote on the left and flexible content slot on the right'
+status: 'stable'
+group: 'Content'
+props:
+  type: object
+  properties:
+    quote:
+      type: string
+      title: 'Quote text'
+      description: 'Plain text quote to display in the left column blockquote'
+      examples:
+        - "Life is what happens to you while you're busy making other plans."
+        - 'The only way to do great work is to love what you do.'
+  required:
+    - quote
+slots:
+  content:
+    title: 'Content slot'
+    description: 'Flexible content area for the right column'

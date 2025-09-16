@@ -1,0 +1,31 @@
+name: Card
+status: stable
+description: A product card with image, title, description, and price.
+group: DrupalEasy
+props:
+  type: object
+  required:
+    - title
+    - price
+  properties:
+    title:
+      type: string
+      title: Title
+      description: The product title.
+      examples:
+        - 'Car'
+        - 'Boat'
+    price:
+      type: number
+      title: Price
+      description: The cost of the product (with 2 decimal places.)
+      examples:
+        - 9.99
+        - 3.45
+slots:
+  image:
+    title: Image
+    description: The product image field.
+  description:
+    title: Description
+    description: A description of the product.

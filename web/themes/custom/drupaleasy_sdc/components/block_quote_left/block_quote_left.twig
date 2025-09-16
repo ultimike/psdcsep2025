@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Template for the Block quote left component.
+ *
+ * Available variables:
+ * - quote: The quote text to display in the blockquote element
+ * - content: The slot content for the right column
+ */
+#}
+<div {{ attributes.addClass('block-quote-left') }}>
+  <div class="block-quote-left__columns">
+    <div class="block-quote-left__quote-column">
+      <blockquote class="block-quote-left__blockquote">
+        {{ quote }}
+      </blockquote>
+    </div>
+    <div class="block-quote-left__content-column">
+      {{ content }}
+    </div>
+  </div>
+</div>
