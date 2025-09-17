@@ -1,0 +1,21 @@
+name: Two columns
+status: stable
+description: A simple 2-column SDC.
+group: DrupalEasy
+props:
+  type: object
+  required:
+    - left_column_percentage_width
+  properties:
+    left_column_percentage_width:
+      type: number
+      title: Left column percentage width
+      description: Width of the left-hand column.
+      examples: [33, 50]
+slots:
+  left_content:
+    title: Left content
+    description: Content for the left-hand column.
+  right_content:
+    title: Right content
+    description: Content for the right-hand column.

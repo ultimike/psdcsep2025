@@ -1,0 +1,63 @@
+name: Steampunk VIP Profile Card
+machine_name: steampunk_vip
+description: 'A Victorian-era inspired author profile card with steampunk aesthetic elements including brass tones, decorative gears, and vintage typography.'
+status: experimental
+group: DrupalEasy
+props:
+  type: object
+  properties:
+    name:
+      type: string
+      title: Author Name
+      description: The full name of the author or person
+      default: 'Author Name'
+      examples:
+        - Bob Loblaw
+    title:
+      type: string
+      title: Author Title
+      description: Professional title or role description
+      default: 'Author & Creator'
+      examples:
+        - Attorney
+    bio:
+      type: string
+      title: Biography
+      description: Short biographical text (recommended under 50 words)
+      default: 'A brief biography describing the author and their work, interests, or specialties.'
+      examples:
+        - 'A fictional attorney from Arrested Development.'
+    social_links:
+      type: object
+      title: Social Media Links
+      description: Object containing social media platform URLs
+      properties:
+        x:
+          type: string
+          title: X (Twitter) URL
+          description: Link to X (formerly Twitter) profile
+          default: ''
+        mastodon:
+          type: string
+          title: Mastodon URL
+          description: Link to Mastodon profile
+          default: ''
+        threads:
+          type: string
+          title: Threads URL
+          description: Link to Threads profile
+          default: ''
+        bluesky:
+          type: string
+          title: Bluesky URL
+          description: Link to Bluesky profile
+          default: ''
+        linkedin:
+          type: string
+          title: LinkedIn URL
+          description: Link to LinkedIn profile
+          default: ''
+slots:
+  avatar:
+    title: Avatar Slot
+    description: Accepts raw HTML for avatar image or placeholder content

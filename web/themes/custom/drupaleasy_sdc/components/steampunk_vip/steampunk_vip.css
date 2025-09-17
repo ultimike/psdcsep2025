@@ -1,0 +1,262 @@
+
+  .steampunk-vip-card[data-component-id="drupaleasy_sdc:steampunk_vip"] {
+    width: 100%;
+    max-width: 30rem;
+    margin: 1.25rem;
+    background: linear-gradient(145deg, #8b6914, #b8860b, #cd853f);
+    border: 3px solid #654321;
+    border-radius: 0.9375rem;
+    padding: 1.875rem;
+    box-shadow:
+      0 8px 32px rgba(0,0,0,0.4),
+      inset 0 2px 4px rgba(255,255,255,0.2),
+      inset 0 -2px 4px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+    font-family: Georgia, serif;
+    display: flex;
+    flex-direction: column;
+  }
+.steampunk-vip-card[data-component-id="drupaleasy_sdc:steampunk_vip"]::before {
+      content: '';
+      position: absolute;
+      top: 0.625rem;
+      left: 0.625rem;
+      right: 0.625rem;
+      bottom: 0.625rem;
+      border: 2px solid rgba(139, 105, 20, 0.6);
+      border-radius: 0.5rem;
+      pointer-events: none;
+    }
+.steampunk-vip-card[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__gear--top-left {
+    top: 0.9375rem;
+    left: 0.9375rem;
+    transform: rotate(15deg);
+  }
+.steampunk-vip-card[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__gear--top-right {
+    top: 0.9375rem;
+    right: 0.9375rem;
+    transform: rotate(30deg);
+  }
+.steampunk-vip-card[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__gear--bottom-left {
+    bottom: 0.9375rem;
+    left: 0.9375rem;
+    transform: rotate(-30deg);
+  }
+.steampunk-vip-card[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__gear--bottom-right {
+    bottom: 0.9375rem;
+    right: 0.9375rem;
+    transform: rotate(60deg);
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__decorations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__gear {
+    position: absolute;
+    width: 2.25rem;
+    height: 2.25rem;
+    background: radial-gradient(circle, #8b6914, #654321);
+    border-radius: 50%;
+    border: 2px solid #4a2c1a;
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__gear::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 2.75rem;
+      height: 2.75rem;
+      background: conic-gradient(
+        from 0deg,
+        transparent 40deg,
+        #654321 40deg,
+        #654321 50deg,
+        transparent 50deg,
+        transparent 85deg,
+        #654321 85deg,
+        #654321 95deg,
+        transparent 95deg,
+        transparent 130deg,
+        #654321 130deg,
+        #654321 140deg,
+        transparent 140deg,
+        transparent 175deg,
+        #654321 175deg,
+        #654321 185deg,
+        transparent 185deg,
+        transparent 220deg,
+        #654321 220deg,
+        #654321 230deg,
+        transparent 230deg,
+        transparent 265deg,
+        #654321 265deg,
+        #654321 275deg,
+        transparent 275deg,
+        transparent 310deg,
+        #654321 310deg,
+        #654321 320deg,
+        transparent 320deg,
+        transparent 355deg,
+        #654321 355deg,
+        #654321 360deg
+      );
+      border-radius: 50%;
+      z-index: -1;
+    }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__gear::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1rem;
+      height: 1rem;
+      background: linear-gradient(145deg, #2c1810, #1a0f08);
+      border-radius: 50%;
+      border: 1px solid #4a2c1a;
+      box-shadow: inset 0 1px 2px rgba(255,255,255,0.2);
+    }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__rivet {
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: radial-gradient(circle, #4a2c1a, #2c1810);
+    border-radius: 50%;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.3);
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__rivet--1 {
+    top: 1.5625rem;
+    left: 1.5625rem;
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__rivet--2 {
+    top: 1.5625rem;
+    right: 1.5625rem;
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__rivet--3 {
+    bottom: 1.5625rem;
+    left: 1.5625rem;
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__rivet--4 {
+    bottom: 1.5625rem;
+    right: 1.5625rem;
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__avatar {
+    width: 7.5rem;
+    height: 7.5rem;
+    margin: 0 auto 1.25rem;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #2c1810, #1a0f08);
+    border: 4px solid #654321;
+    box-shadow:
+      inset 0 0 20px rgba(0,0,0,0.5),
+      0 4px 8px rgba(0,0,0,0.3);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__avatar img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      border-radius: 50%;
+    }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__avatar-placeholder {
+    font-size: 3.75rem;
+    color: #8b6914;
+    opacity: 0.7;
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__name {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #2c1810;
+    margin: 0 0 0.5rem 0;
+    text-shadow:
+      1px 1px 2px rgba(255,255,255,0.3),
+      0 0 0.25rem rgba(139,105,20,0.5);
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__title {
+    font-size: 1rem;
+    color: #654321;
+    margin: 0 0 1.25rem 0;
+    font-style: italic;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.2);
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__biography {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #2c1810;
+    margin: 0 0 1.5625rem 0;
+    background: rgba(255,255,255,0.1);
+    padding: 0.9375rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(101,67,33,0.3);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.9375rem;
+    flex-wrap: wrap;
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__social-link {
+    display: inline-block;
+    width: 2.8125rem;
+    height: 2.8125rem;
+    background: linear-gradient(145deg, #654321, #4a2c1a);
+    border: 2px solid #8b6914;
+    border-radius: 50%;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    color: #cd853f;
+    font-size: 1.125rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow:
+      0 3px 6px rgba(0,0,0,0.3),
+      inset 0 1px 2px rgba(255,255,255,0.2);
+    position: relative;
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__social-link:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 5px 12px rgba(0,0,0,0.4),
+        inset 0 1px 2px rgba(255,255,255,0.3);
+      background: linear-gradient(145deg, #8b6914, #654321);
+      border-color: #cd853f;
+    }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__social-link--x::after {
+    content: "𝕏";
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__social-link--mastodon::after {
+    content: "♦";
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__social-link--threads::after {
+    content: "@";
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__social-link--bluesky::after {
+    content: "☁";
+  }
+[data-component-id="drupaleasy_sdc:steampunk_vip"] .steampunk-vip-card__social-link--linkedin::after {
+    content: "in";
+    font-size: 0.875rem;
+  }

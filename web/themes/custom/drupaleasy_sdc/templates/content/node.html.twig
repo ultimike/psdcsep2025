@@ -101,21 +101,23 @@
   <strong>{{ node.bundle() }}</strong>
   {% endset %}
 
-  {{ include('drupaleasy_sdc:chip', {
-    color: 'secondary',
-    dismissible: false,
-    content: chip_content,
-  }, with_context = false) }}
+  {% set chip_output %}
+    {{ include('drupaleasy_sdc:chip', {
+      color: 'secondary',
+      dismissible: false,
+      content: chip_content,
+    }, with_context = false) }}
+  {% endset %}
 
   {# Not preferred #}
-  {% include 'drupaleasy_sdc:chip' with {
+  {# {% include 'drupaleasy_sdc:chip' with {
     color: 'primary',
     dismissible: true,
     content: chip_content
-  } only %}
+  } only %} #}
 
   {# Not preferred #}
-  {% embed 'drupaleasy_sdc:chip' with {
+  {# {% embed 'drupaleasy_sdc:chip' with {
     color: 'primary',
     dismissible: true,
     node: node } only %}
@@ -123,9 +125,31 @@
       Type:
       <strong>{{ node.bundle() }}</strong>
     {% endblock %}
-  {% endembed %}
+  {% endembed %} #}
 
+{% set social_links = {
+  'x': 'https://x.com/johndoe',
+  'mastodon': 'https://mastodon.social/@johndoe',
+  'threads': 'https://mastodon.social/@johndoe',
+  'bluesky': 'https://mastodon.social/@johndoe',
+  'linkedin': 'https://mastodon.social/@johndoe',
+} %}
 
+{% set vip_output %}
+  {{ include('drupaleasy_sdc:steampunk_vip', {
+    name: 'John Doe',
+    title: 'Consultant',
+    bio: 'Experienced with Drupal 10, dedicated to mentoring new developers.',
+    social_links: social_links,
+    avatar: avatar
+  }, with_context = false) }}
+{% endset %}
+
+{{ include('drupaleasy_sdc:two_columns', {
+  left_column_percentage_width: 33,
+  left_content: chip_output,
+  right_content: vip_output,
+}, with_context = false) }}
 
 
 </article>

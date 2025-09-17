@@ -1,0 +1,17 @@
+[data-component-id="drupaleasy_sdc:two_columns"] {
+  &.container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .left-column {
+    background-color: #e3f2fd;
+    padding: 20px;
+  }
+
+  .right-column {
+    background-color: #f3e5f5;
+    flex: 1;
+    padding: 20px;
+  }
+}

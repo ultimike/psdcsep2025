@@ -1,0 +1,68 @@
+{#
+/**
+ * @file
+ * Steampunk VIP Profile Card component template.
+ *
+ * Available variables:
+ * - name: Author's full name
+ * - title: Author's professional title
+ * - bio: Short biographical description
+ * - social_links: Object containing social media URLs
+ * - avatar: Slot content for avatar image
+ * - attributes: HTML attributes for the component wrapper
+ */
+#}
+{% set classes = [
+  'steampunk-vip-card',
+] %}
+
+<div{{attributes.addClass(classes)}}>
+  <div class="steampunk-vip-card__decorations">
+    <div class="steampunk-vip-card__gear steampunk-vip-card__gear--top-left"></div>
+    <div class="steampunk-vip-card__gear steampunk-vip-card__gear--top-right"></div>
+    <div class="steampunk-vip-card__gear steampunk-vip-card__gear--bottom-left"></div>
+    <div class="steampunk-vip-card__gear steampunk-vip-card__gear--bottom-right"></div>
+
+    <div class="steampunk-vip-card__rivet steampunk-vip-card__rivet--1"></div>
+    <div class="steampunk-vip-card__rivet steampunk-vip-card__rivet--2"></div>
+    <div class="steampunk-vip-card__rivet steampunk-vip-card__rivet--3"></div>
+    <div class="steampunk-vip-card__rivet steampunk-vip-card__rivet--4"></div>
+  </div>
+
+  <div class="steampunk-vip-card__content">
+    <div class="steampunk-vip-card__avatar">
+      {% if avatar %}
+        {{ avatar }}
+      {% else %}
+        <div class="steampunk-vip-card__avatar-placeholder">👤</div>
+      {% endif %}
+    </div>
+
+    <h2 class="steampunk-vip-card__name">{{ name|default('Author Name') }}</h2>
+    <p class="steampunk-vip-card__title">{{ title|default('Author & Creator') }}</p>
+
+    <div class="steampunk-vip-card__biography">
+      {{ bio|default('A brief biography describing the author and their work, interests, or specialties.') }}
+    </div>
+
+    {% if social_links %}
+      <div class="steampunk-vip-card__social-links">
+        {% if social_links.x %}
+          <a href="{{ social_links.x }}" class="steampunk-vip-card__social-link steampunk-vip-card__social-link--x" title="Follow on X" rel="noopener noreferrer" target="_blank"></a>
+        {% endif %}
+        {% if social_links.mastodon %}
+          <a href="{{ social_links.mastodon }}" class="steampunk-vip-card__social-link steampunk-vip-card__social-link--mastodon" title="Follow on Mastodon" rel="me noopener noreferrer" target="_blank"></a>
+        {% endif %}
+        {% if social_links.threads %}
+          <a href="{{ social_links.threads }}" class="steampunk-vip-card__social-link steampunk-vip-card__social-link--threads" title="Follow on Threads" rel="noopener noreferrer" target="_blank"></a>
+        {% endif %}
+        {% if social_links.bluesky %}
+          <a href="{{ social_links.bluesky }}" class="steampunk-vip-card__social-link steampunk-vip-card__social-link--bluesky" title="Follow on Bluesky" rel="noopener noreferrer" target="_blank"></a>
+        {% endif %}
+        {% if social_links.linkedin %}
+          <a href="{{ social_links.linkedin }}" class="steampunk-vip-card__social-link steampunk-vip-card__social-link--linkedin" title="Connect on LinkedIn" rel="noopener noreferrer" target="_blank"></a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
